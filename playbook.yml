@@ -1,5 +1,5 @@
 ---
--host: 172.31.0.28
+-host: all
  tasks:
  -name: Install Git
   yum:

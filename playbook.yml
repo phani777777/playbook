@@ -2,6 +2,6 @@
 -host: all
  tasks:
  -name: Install Git
-  yum:
+  apt:
     name: git
     state: present

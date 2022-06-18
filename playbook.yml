@@ -1,7 +1,12 @@
 ---
--host: all
- tasks:
- -name: Install Git
-  apt:
-    name: git
-    state: present
+- hosts: localhost
+  tasks:
+    - name: Update repository
+      apt_repository:
+       repo: 'ppa:git-core/ppa'
+       state: present
+    - name: Install git
+      apt:
+       name: git
+       state: present
+       update_cache: yes

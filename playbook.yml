@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: Install git
-      apt:
+      yum:
        name: git
        state: present
        update_cache: yes
